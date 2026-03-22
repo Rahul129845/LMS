@@ -7,9 +7,9 @@
     "dev": "ts-node-dev --respawn --transpile-only -r dotenv/config src/server.ts",
     "build": "tsc",
     "start": "node -r dotenv/config dist/server.js",
-    "migrate": "ts-node-dev -r dotenv/config node_modules/.bin/knex migrate:latest --knexfile knexfile.ts",
+    "migrate": "ts-node --transpile-only -r dotenv/config node_modules/.bin/knex migrate:latest --knexfile knexfile.ts",
     "migrate:prod": "npx knex migrate:latest --knexfile knexfile.ts --env production",
-    "migrate:rollback": "ts-node-dev -r dotenv/config node_modules/.bin/knex migrate:rollback --knexfile knexfile.ts"
+    "migrate:rollback": "ts-node --transpile-only -r dotenv/config node_modules/.bin/knex migrate:rollback --knexfile knexfile.ts"
   },
   "keywords": [],
   "author": "",
