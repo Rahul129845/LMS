@@ -22,4 +22,5 @@ export const env = {
   JWT_REFRESH_SECRET: requireEnv('JWT_REFRESH_SECRET'),
   CORS_ORIGIN: process.env['CORS_ORIGIN'] || 'http://localhost:3000',
   COOKIE_DOMAIN: process.env['COOKIE_DOMAIN'] || 'localhost',
+  HF_API_TOKEN: process.env['HF_API_TOKEN'],
 };

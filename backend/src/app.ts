@@ -7,6 +7,7 @@ import { subjectRoutes } from './modules/subjects/subject.routes';
 import { videoRoutes } from './modules/videos/video.routes';
 import { progressRoutes } from './modules/progress/progress.routes';
 import { healthRoutes } from './modules/health/health.routes';
+import { aiRoutes } from './modules/ai/ai.routes';
 import { errorHandler } from './middleware/errorHandler';
 import { requestLogger } from './middleware/requestLogger';
 
@@ -33,6 +34,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/videos', videoRoutes);
 app.use('/api/progress', progressRoutes);
+app.use('/api/ai', aiRoutes);
 app.use('/api', healthRoutes);
 
 // Global error handler

@@ -5,6 +5,7 @@ import apiClient from '@/lib/apiClient';
 import { VideoPlayer } from '@/components/Video/VideoPlayer';
 import { useSidebarStore } from '@/store/sidebarStore';
 import { Spinner } from '@/components/common/Spinner';
+import { AiPanel } from '@/components/AI/AiPanel';
 import Link from 'next/link';
 
 interface VideoData {
@@ -173,6 +174,12 @@ export default function VideoPage() {
                 {video.description}
               </p>
             )}
+
+            {/* AI Assistant */}
+            <AiPanel 
+              videoTitle={video.title} 
+              videoDescription={video.description} 
+            />
           </div>
 
           {/* Navigation */}
